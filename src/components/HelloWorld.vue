@@ -18,6 +18,10 @@
       <!-- in place of {{ }} -->
       <span v-text="input_val"></span>
     </div>
+    <div>
+      <!-- click event + counter -->
+      <button class="btn" v-on:click="counter++">You've clicked me {{counter}} times!</button>
+    </div>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -48,6 +52,7 @@ export default {
         {firstname: 'Joan', lastname: 'Leslie'}
       ],
       input_val: '',
+      counter: 0
     }
   }
 }
@@ -58,12 +63,15 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
+div {
+  padding: .25rem 0;
+}
 ul {
   list-style-type: none;
   padding: 0;
 }
 li {
-  display: inline-block;
+  display: block;
   margin: 0 10px;
 }
 a {
