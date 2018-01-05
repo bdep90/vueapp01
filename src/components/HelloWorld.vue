@@ -2,7 +2,12 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <div v-for="user in users">
-      {{ user.firstname }} {{ user.lastname }}
+      <ul>
+        <li>{{ user.firstname }} {{ user.lastname }}</li>
+      </ul>
+    </div>
+    <div>
+      <input type="text" v-model="input_val">
     </div>
     <h2>Essential Links</h2>
     <ul>
@@ -33,6 +38,7 @@ export default {
         {firstname: 'Bridgette', lastname: 'Depay'},
         {firstname: 'Joan', lastname: 'Leslie'}
       ],
+      input_val: '',
     }
   }
 }
