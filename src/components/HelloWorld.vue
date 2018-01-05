@@ -1,13 +1,22 @@
 <template>
   <div class="hello">
+    <!-- {{ }} > display model data property -->
     <h1>{{ msg }}</h1>
-    <div v-for="user in users">
+    <div>
       <ul>
-        <li>{{ user.firstname }} {{ user.lastname }}</li>
+        <!-- render array of data -->
+        <li v-for="user in users">
+          {{ user.firstname }} {{ user.lastname }}
+        </li>
       </ul>
     </div>
     <div>
+      <!-- binding -->
       <input type="text" v-model="input_val">
+    </div>
+    <div>
+      <!-- in place of {{ }} -->
+      <span v-text="input_val"></span>
     </div>
     <h2>Essential Links</h2>
     <ul>
